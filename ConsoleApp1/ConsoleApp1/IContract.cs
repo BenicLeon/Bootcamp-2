@@ -8,11 +8,7 @@ namespace ConsoleApp1
 {
     public interface IContract
     {
-        bool IsSigned
-        {
-            get;
-            set;
-        }
+      
         void SignContract();
         void TerminateContract();
     }

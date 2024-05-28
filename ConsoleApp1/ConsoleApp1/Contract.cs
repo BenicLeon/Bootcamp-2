@@ -9,26 +9,29 @@ namespace ConsoleApp1
     public class Contract : IContract
     {
         public DateTime SigningDate { get; set; }
-        public decimal Salary { get; set; }
+        public int Salary { get; set; }
 
-        public bool IsSigned { get; set; }
+       
 
-        public Contract(DateTime signingDate, decimal salary)
+        
+
+        public Contract(DateTime signingDate, int salary)
         {
             SigningDate = signingDate;
             Salary = salary;
-            IsSigned = false;
+           
+           
         }
 
         public void SignContract()
         {
-            IsSigned = true;
-            Console.WriteLine($"Contract signed on {SigningDate.ToShortDateString()} with a salary of {Salary:C}.");
+           
+            Console.WriteLine($"Contract signed on {SigningDate.ToShortDateString()}");
         }
 
         public void TerminateContract()
         {
-            IsSigned = false;
+            
             Console.WriteLine("Contract terminated.");
         }
     }
